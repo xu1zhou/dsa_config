@@ -244,3 +244,16 @@ Code 200 : 2494057 (100.0 %)
 Response Header Sizes : count 2494528 avg 154.92096 +/- 2.186 min 0 max 155 sum 386454675
 Response Body/Total Sizes : count 2494528 avg 14710.172 +/- 202.2 min 0 max 14713 sum 3.66949365e+10
 All done 2494528 calls (plus 1000 warmup) 74.956 ms avg, 13177.0 qps
+
+3min c1000(backend)
+# target 50% 0.0226959
+# target 75% 0.0281433
+# target 90% 0.0342328
+# target 99% 0.0677548
+# target 99.9% 0.167422
+Sockets used: 99480 (for perfect keepalive, would be 1000)
+Jitter: false
+Code 200 : 9897179 (100.0 %)
+Response Header Sizes : count 9897179 avg 154.95024 +/- 0.4963 min 150 max 155 sum 1.53357029e+09
+Response Body/Total Sizes : count 9897179 avg 14712.95 +/- 0.4963 min 14708 max 14713 sum 1.45616702e+11
+All done 9897179 calls (plus 1000 warmup) 24.070 ms avg, 41542.5 qps
