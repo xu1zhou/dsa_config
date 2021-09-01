@@ -136,6 +136,7 @@ All done 4254947 calls (plus 1000 warmup) 42.558 ms avg, 23250.4 qps
 ```
 
 
+# minivoy proxy DSA enable (http|16K/req|Conn 500 | 1 worker| 1min)
 
 # minivoy proxy DSA enable (http|16K/req|Conn 1000 | 1 worker| 1min)
 ```
@@ -153,7 +154,36 @@ Response Body/Total Sizes : count 1145869 avg 14820.269 +/- 157.9 min 0 max 1482
 All done 1145869 calls (plus 1000 warmup) 53.355 ms avg, 18188.3 qps
 ```
 
+# minivoy proxy DSA enable (http|16K/req|Conn 500 | 1 worker| 1min)
+
+
 # minivoy proxy DSA enable (http|16K/req|Conn 1000 | 1 worker| 3min)
 ```
-
+target 50% 0.00936996
+# target 75% 0.0105822
+# target 90% 0.012727
+# target 99% 0.249858
+# target 99.9% 3.91312
+Sockets used: 41899 (for perfect keepalive, would be 1000)
+Jitter: false
+Code  -1 : 96 (0.0 %)
+Code 200 : 4091631 (100.0 %)
+Response Header Sizes : count 4091727 avg 154.9465 +/- 0.9001 min 0 max 155 sum 633998780
+Response Body/Total Sizes : count 4091727 avg 14821.602 +/- 71.79 min 0 max 14822 sum 6.06459507e+10
+All done 4091727 calls (plus 1000 warmup) 44.270 ms avg, 22359.3 qps
+```
+# minivoy proxy DSA enable (http|16K/req|Conn 1500 | 1 worker| 3min)
+```
+# target 50% 0.0093966
+# target 75% 0.0104849
+# target 90% 0.012776
+# target 99% 3.07639
+# target 99.9% 5.90147
+Sockets used: 44388 (for perfect keepalive, would be 1500)
+Jitter: false
+Code  -1 : 322 (0.0 %)
+Code 200 : 4221458 (100.0 %)
+Response Header Sizes : count 4221780 avg 154.93833 +/- 1.441 min 0 max 155 sum 654115545
+Response Body/Total Sizes : count 4221780 avg 14820.82 +/- 129.4 min 0 max 14822 sum 6.257024e+10
+All done 4221780 calls (plus 1500 warmup) 64.223 ms avg, 23067.8 qps
 ```
