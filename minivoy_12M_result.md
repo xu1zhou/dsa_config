@@ -6,7 +6,23 @@
 | minivoy(MEM)   | Text        | | |
 | minivoy(DSA)   | Text        | | |
 
-# minivoy proxy DSA diabled (12M/reqeust|Connection 100)
+# direct backend
+>fortio load  -c 100 -qps 0 -t 60s -httpbufferkb=13000 http://127.0.0.1/cirros.img 
+```
+# target 50% 0.100617
+# target 75% 0.16935
+# target 90% 0.213827
+# target 99% 0.37861
+# target 99.9% 0.649298
+Sockets used: 540 (for perfect keepalive, would be 100)
+Jitter: false
+Code 200 : 49351 (100.0 %)
+Response Header Sizes : count 49351 avg 260.95522 +/- 0.4711 min 256 max 261 sum 12878401
+Response Body/Total Sizes : count 49351 avg 12716293 +/- 0.3221 min 1.2716288e+07 max 1.2716293e+07 sum 6.27561774e+11
+All done 49351 calls (plus 100 warmup) 121.627 ms avg, 821.8 qps
+```
+
+# minivoy proxy DSA diabled (1min|12M/reqeust|Connection 100)
 >fortio load  -c 100 -qps 0 -t 60s -httpbufferkb=13000 http://10.239.48.109:4433/cirros.img 
 ```
 # target 50% 0.9878
@@ -22,7 +38,7 @@ Response Body/Total Sizes : count 5838 avg 12716293 +/- 0 min 1.2716293e+07 max 
 All done 5838 calls (plus 100 warmup) 1035.890 ms avg, 95.7 qps
 ```
 
-# minivoy proxy DSA enabled (12M/reqeust|Connection 100)
+# minivoy proxy DSA enabled (1min|12M/reqeust|Connection 100)
 >fortio load  -c 100 -qps 0 -t 60s -httpbufferkb=13000 http://10.239.48.109:4433/cirros.img 
 ```
 # target 50% 1.46223
