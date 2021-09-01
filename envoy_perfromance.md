@@ -1,5 +1,5 @@
 # no envoy proxy
-client-->nginx(http)
+client-->nginx(http)[127.0.0.1:8080]
 fortio load -k -c 1000 -qps 0 -t 60s -httpbufferkb=16000 http://127.0.0.1:8080
 ```
 # target 50% 0.0227868
@@ -15,7 +15,7 @@ Response Body/Total Sizes : count 2020009 avg 14712.951 +/- 0.4915 min 14708 max
 All done 2020009 calls (plus 1000 warmup) 29.707 ms avg, 33652.6 qps
 ```
 # with envoy proxy
-client -->envoy(https)--->nginx(http)
+client -->envoy(https)[10.239.48.109:4433]--->nginx(http)[127.0.0.1:8080]
 fortio load -k -c 1000 -qps 0 -t 60s -httpbufferkb=16000 https://10.239.48.109:4433
 ```
 # target 50% 0.083584
