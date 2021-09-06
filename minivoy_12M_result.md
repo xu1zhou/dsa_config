@@ -6,6 +6,175 @@
 | minivoy(MEM)     | Text             |             |            |
 | minivoy(DSA)     | Text             |             |            |
 
+---
+# 9.6
+## 2Conn 12M minivoy (MEM) (debug enable)
+CPU 97%
+All done 903 calls (plus 2 warmup) 66.508 ms avg, 30.1 qps
+```
+CPU 97%
+
+# target 50% 0.0664414
+# target 75% 0.0889815
+# target 90% 0.108282
+# target 99% 0.119191
+# target 99.9% 0.122527
+Sockets used: 10 (for perfect keepalive, would be 2)
+Jitter: false
+Code 200 : 903 (100.0 %)
+20:25:53 W stats.go:73> Unexpected negative sigma for &{Count:903 Min:1.2716288e+07 Max:1.2716293e+07 Sum:1.1482812539e+10 sumOfSquares:1.4601880820134582e+17}: -0.42524916943521596
+Response Header Sizes : count 903 avg 260.9557 +/- 0.4685 min 256 max 261 sum 235643
+20:25:53 W stats.go:73> Unexpected negative sigma for &{Count:903 Min:1.2716288e+07 Max:1.2716293e+07 Sum:1.1482812539e+10 sumOfSquares:1.4601880820134582e+17}: -0.42524916943521596
+Response Body/Total Sizes : count 903 avg 12716293 +/- 0 min 1.2716288e+07 max 1.2716293e+07 sum 1.14828125e+10
+All done 903 calls (plus 2 warmup) 66.508 ms avg, 30.1 qps
+```
+## 4Conn 12M minivoy (MEM) (debug disable) 30s
+All done 2473 calls (plus 4 warmup) 48.563 ms avg, 82.2 qps
+CPU 99%
+```
+# target 50% 0.0445833
+# target 75% 0.0704855
+# target 90% 0.0822124
+# target 99% 0.10305
+# target 99.9% 0.118948
+Sockets used: 27 (for perfect keepalive, would be 4)
+Jitter: false
+Code 200 : 2473 (100.0 %)
+Response Header Sizes : count 2473 avg 260.9535 +/- 0.4799 min 256 max 261 sum 645338
+Response Body/Total Sizes : count 2473 avg 12716293 +/- 1.246 min 1.2716288e+07 max 1.2716293e+07 sum 3.14473925e+10
+All done 2473 calls (plus 4 warmup) 48.563 ms avg, 82.2 qps
+```
+
+## 4Conn 12M minivoy (DSA) (debug disable) 60s
+All done 4541 calls (plus 4 warmup) 52.867 ms avg, 75.6 qps
+CPU>95%
+```
+# target 50% 0.0557375
+# target 75% 0.0732975
+# target 90% 0.0844977
+# target 99% 0.101953
+# target 99.9% 0.119344
+Sockets used: 48 (for perfect keepalive, would be 4)
+Jitter: false
+Code 200 : 4541 (100.0 %)
+Response Header Sizes : count 4541 avg 260.95155 +/- 0.4898 min 256 max 261 sum 1184981
+Response Body/Total Sizes : count 4541 avg 12716293 +/- 2.029 min 1.2716288e+07 max 1.2716293e+07 sum 5.77446863e+10
+All done 4541 calls (plus 4 warmup) 52.867 ms avg, 75.6 qps
+```
+
+
+## 2Conn 100M minivoy (DSA) (debug disable) 60s
+All done 404 calls (plus 2 warmup) 297.842 ms avg, 6.7 qps
+CPU>95%
+```
+# target 50% 0.294853
+# target 75% 0.331752
+# target 90% 0.365143
+# target 99% 0.482667
+# target 99.9% 0.536498
+Sockets used: 6 (for perfect keepalive, would be 2)
+Jitter: false
+Code 200 : 404 (100.0 %)
+20:42:40 W stats.go:73> Unexpected negative sigma for &{Count:404 Min:1.04857858e+08 Max:1.04857863e+08 Sum:4.2362576632e+10 sumOfSquares:4.442049254708087e+18}: -32.95049504950495
+Response Header Sizes : count 404 avg 262.9505 +/- 0.495 min 258 max 263 sum 106232
+20:42:40 W stats.go:73> Unexpected negative sigma for &{Count:404 Min:1.04857858e+08 Max:1.04857863e+08 Sum:4.2362576632e+10 sumOfSquares:4.442049254708087e+18}: -32.95049504950495
+Response Body/Total Sizes : count 404 avg 1.0485786e+08 +/- 0 min 1.04857858e+08 max 1.04857863e+08 sum 4.23625766e+10
+All done 404 calls (plus 2 warmup) 297.842 ms avg, 6.7 qps
+```
+## 2Conn 100M minivoy (MEM) (debug disable) 60s
+All done 404 calls (plus 2 warmup) 297.917 ms avg, 6.7 qps
+CPU>98
+```
+# target 50% 0.292903
+# target 75% 0.331855
+# target 90% 0.3695
+# target 99% 0.4745
+# target 99.9% 0.512574
+Sockets used: 6 (for perfect keepalive, would be 2)
+Jitter: false
+Code 200 : 404 (100.0 %)
+20:45:01 W stats.go:73> Unexpected negative sigma for &{Count:404 Min:1.04857858e+08 Max:1.04857863e+08 Sum:4.2362576632e+10 sumOfSquares:4.442049254708087e+18}: -32.95049504950495
+Response Header Sizes : count 404 avg 262.9505 +/- 0.495 min 258 max 263 sum 106232
+20:45:01 W stats.go:73> Unexpected negative sigma for &{Count:404 Min:1.04857858e+08 Max:1.04857863e+08 Sum:4.2362576632e+10 sumOfSquares:4.442049254708087e+18}: -32.95049504950495
+Response Body/Total Sizes : count 404 avg 1.0485786e+08 +/- 0 min 1.04857858e+08 max 1.04857863e+08 sum 4.23625766e+10
+All done 404 calls (plus 2 warmup) 297.917 ms avg, 6.7 qps
+```
+## 1Conn 500M minivoy (MEM) (debug disable) 60s
+to avoid error, decrese conn to 1
+when connection is 1, no error msg
+All done 50 calls (plus 1 warmup) 1230.967 ms avg, 0.8 qps
+CPU>98
+```
+# target 50% 1.37143
+# target 75% 1.72857
+# target 90% 1.94286
+# target 99% 2.22745
+# target 99.9% 2.26839
+Sockets used: 1 (for perfect keepalive, would be 1)
+Jitter: false
+Code 200 : 50 (100.0 %)
+Response Header Sizes : count 50 avg 264 +/- 0 min 264 max 264 sum 13200
+Response Body/Total Sizes : count 50 avg 5.2428826e+08 +/- 0 min 5.24288264e+08 max 5.24288264e+08 sum 2.62144132e+10
+All done 50 calls (plus 1 warmup) 1230.967 ms avg, 0.8 qps
+```
+## 1Conn 500M minivoy (DSA) (debug disable) 60s
+seem CPU is lower 1-2%(need check)
+All done 52 calls (plus 1 warmup) 1155.330 ms avg, 0.9 qps
+```
+# target 50% 1.28571
+# target 75% 1.65714
+# target 90% 1.88
+# target 99% 2.061
+# target 99.9% 2.12048
+Sockets used: 1 (for perfect keepalive, would be 1)
+Jitter: false
+Code 200 : 52 (100.0 %)
+20:56:03 W stats.go:73> Unexpected negative sigma for &{Count:52 Min:5.24288264e+08 Max:5.24288264e+08 Sum:2.7262989728e+10 sumOfSquares:1.429366555594295e+19}: -39.38461538461539
+Response Header Sizes : count 52 avg 264 +/- 0 min 264 max 264 sum 13728
+20:56:03 W stats.go:73> Unexpected negative sigma for &{Count:52 Min:5.24288264e+08 Max:5.24288264e+08 Sum:2.7262989728e+10 sumOfSquares:1.429366555594295e+19}: -39.38461538461539
+Response Body/Total Sizes : count 52 avg 5.2428826e+08 +/- 0 min 5.24288264e+08 max 5.24288264e+08 sum 2.72629897e+10
+All done 52 calls (plus 1 warmup) 1155.330 ms avg, 0.9 qps
+```
+
+## 1Conn 700M minivoy (DSA) (debug disable) 60s
+All done 35 calls (plus 1 warmup) 1740.944 ms avg, 0.6 qps
+```
+# target 50% 1.65739
+# target 75% 1.97295
+# target 90% 2.45226
+# target 99% 2.76885
+# target 99.9% 2.8005
+Sockets used: 1 (for perfect keepalive, would be 1)
+Jitter: false
+Code 200 : 35 (100.0 %)
+Response Header Sizes : count 35 avg 264 +/- 0 min 264 max 264 sum 9240
+Response Body/Total Sizes : count 35 avg 7.3400346e+08 +/- 10.82 min 7.34003464e+08 max 7.34003464e+08 sum 2.56901212e+10
+All done 35 calls (plus 1 warmup) 1740.944 ms avg, 0.6 qps
+```
+
+## 1Conn 700M minivoy (MEM) (debug disable) 60s
+All done 28 calls (plus 1 warmup) 2186.422 ms avg, 0.5 qps
+Code  -1 : 2 (7.1 %)
+
+```
+# target 50% 2.2
+# target 75% 2.66667
+# target 90% 2.94667
+# target 99% 3.00021
+# target 99.9% 3.00024
+Sockets used: 3 (for perfect keepalive, would be 1)
+Jitter: false
+Code  -1 : 2 (7.1 %)
+Code 200 : 26 (92.9 %)
+Response Header Sizes : count 28 avg 264 +/- 0 min 264 max 264 sum 7392
+Response Body/Total Sizes : count 28 avg 7.1468788e+08 +/- 8.102e+07 min 3.08658176e+08 max 7.34003464e+08 sum 2.00112606e+10
+All done 28 calls (plus 1 warmup) 2186.422 ms avg, 0.5 qps
+```
+
+
+
+9.6 end
+---
 # direct backend
 >fortio load  -c 100 -qps 0 -t 60s -httpbufferkb=13000 http://127.0.0.1/cirros.img 
 ```
