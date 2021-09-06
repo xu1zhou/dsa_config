@@ -170,8 +170,69 @@ Response Header Sizes : count 28 avg 264 +/- 0 min 264 max 264 sum 7392
 Response Body/Total Sizes : count 28 avg 7.1468788e+08 +/- 8.102e+07 min 3.08658176e+08 max 7.34003464e+08 sum 2.00112606e+10
 All done 28 calls (plus 1 warmup) 2186.422 ms avg, 0.5 qps
 ```
+## 1Conn 700M minivoy (MEM) (debug disable) 60s (set listenfd NOblock)
+All done 36 calls (plus 1 warmup) 1709.672 ms avg, 0.6 qps
+```
+# target 50% 1.63713
+# target 75% 1.90928
+# target 90% 2.48
+# target 99% 3.00017
+# target 99.9% 3.00025
+Sockets used: 2 (for perfect keepalive, would be 1)
+Jitter: false
+Code  -1 : 1 (2.8 %)
+Code 200 : 35 (97.2 %)
+Response Header Sizes : count 36 avg 264 +/- 0 min 264 max 264 sum 9504
+Response Body/Total Sizes : count 36 avg 7.2852593e+08 +/- 3.241e+07 min 5.36812273e+08 max 7.34003464e+08 sum 2.62269335e+10                                                                                                                          
+All done 36 calls (plus 1 warmup) 1709.672 ms avg, 0.6 qps
+```
+## 1Conn 700M minivoy (DSA) (debug disable) 60s (set listenfd NOblock)
+All done 38 calls (plus 1 warmup) 1615.212 ms avg, 0.6 qps
+```
+# target 50% 1.67006
+# target 75% 1.87902
+# target 90% 2.02317
+# target 99% 2.41941
+# target 99.9% 2.45903
+Sockets used: 1 (for perfect keepalive, would be 1)
+Jitter: false
+Code 200 : 38 (100.0 %)
+Response Header Sizes : count 38 avg 264 +/- 0 min 264 max 264 sum 10032
+Response Body/Total Sizes : count 38 avg 7.3400346e+08 +/- 0 min 7.34003464e+08 max 7.34003464e+08 sum 2.78921316e+10
+All done 38 calls (plus 1 warmup) 1615.212 ms avg, 0.6 qps
+```
 
 
+## 1Conn 800M minivoy (DSA) (debug disable) 60s (set listenfd NOblock)
+All done 31 calls (plus 1 warmup) 1935.659 ms avg, 0.5 qps
+```
+# target 50% 1.8317
+# target 75% 2.20833
+# target 90% 2.98333
+# target 99% 3.00115
+# target 99.9% 3.00127
+Sockets used: 4 (for perfect keepalive, would be 1)
+Jitter: false
+Code  -1 : 3 (9.7 %)
+Code 200 : 28 (90.3 %)
+Response Header Sizes : count 31 avg 264 +/- 0 min 264 max 264 sum 8184
+Response Body/Total Sizes : count 31 avg 8.2204471e+08 +/- 5.661e+07 min 5.85629696e+08 max 8.38861064e+08 sum 2.54833861e+10
+All done 31 calls (plus 1 warmup) 1935.659 ms avg, 0.5 qps
+```
+## 1Conn 800M minivoy (MEM) (debug disable) 60s (set listenfd NOblock)
+seem latency is not steable when there is many io timeout error
+```
+# target 90% 3.00024
+# target 99% 3.00039
+# target 99.9% 3.0004
+Sockets used: 7 (for perfect keepalive, would be 1)
+Jitter: false
+Code  -1 : 6 (25.0 %)
+Code 200 : 18 (75.0 %)
+Response Header Sizes : count 24 avg 264 +/- 0 min 264 max 264 sum 6336
+Response Body/Total Sizes : count 24 avg 7.4969045e+08 +/- 1.743e+08 min 2.707456e+08 max 8.38861064e+08 sum 1.79925709e+10
+All done 24 calls (plus 1 warmup) 2544.299 ms avg, 0.4 qps
+```
 
 9.6 end
 ---
