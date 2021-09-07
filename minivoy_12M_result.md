@@ -6,6 +6,62 @@
 | minivoy(MEM)     | Text             |             |            |
 | minivoy(DSA)     | Text             |             |            |
 
+
+---
+# 9.7
+
+## 1500Conn 16K minivoy (MEM) (debug enable)
+CPU >91%
+timeout =10s
+error:  Closing dead socket &{{0xc007e2c580}} (err EOF at first read)
+All done 1133752 calls (plus 1500 warmup) 79.411 ms avg, 18875.5 qps
+latency bad than 1000conn
+```
+# target 75% 0.059007
+# target 90% 0.064515
+# target 99% 0.511307
+# target 99.9% 2.90944
+Sockets used: 13144 (for perfect keepalive, would be 1500)
+Jitter: false
+Code 200 : 1133752 (100.0 %)
+Response Header Sizes : count 1133752 avg 255.95325 +/- 0.4812 min 251 max 256 sum 290187512
+Response Body/Total Sizes : count 1133752 avg 16639.953 +/- 0.4812 min 16635 max 16640 sum 1.88655803e+10
+All done 1133752 calls (plus 1500 warmup) 79.411 ms avg, 18875.5 qps
+```
+
+## 1000Conn 16K minivoy (MEM) (debug enable)
+All done 1178710 calls (plus 1000 warmup) 50.923 ms avg, 19628.1 qps
+timeout =10s
+error:  Closing dead socket &{{0xc007e2c580}} (err EOF at first read)
+CPU >93%
+throughput: 
+```
+# target 75% 0.0545818
+# target 90% 0.0580349
+# target 99% 0.067864
+# target 99.9% 0.247261
+Sockets used: 12156 (for perfect keepalive, would be 1000)
+Jitter: false
+Code 200 : 1178710 (100.0 %)
+Response Header Sizes : count 1178710 avg 255.9526 +/- 0.4845 min 251 max 256 sum 301693890
+Response Body/Total Sizes : count 1178710 avg 16639.953 +/- 0.4845 min 16635 max 16640 sum 1.96136785e+10
+All done 1178710 calls (plus 1000 warmup) 50.923 ms avg, 19628.1 qps
+```
+
+## 1000Conn 16K minivoy (DSA) (debug enable)
+CPU 92%
+throughput: 266M
+```
+# target 90% 0.0678099
+# target 99% 0.085055
+# target 99.9% 0.404278
+Sockets used: 10882 (for perfect keepalive, would be 1000)
+Jitter: false
+Code 200 : 1023855 (100.0 %)
+Response Header Sizes : count 1023855 avg 255.95167 +/- 0.4892 min 251 max 256 sum 262057395
+Response Body/Total Sizes : count 1023855 avg 16639.952 +/- 0.4892 min 16635 max 16640 sum 1.70368977e+10
+All done 1023855 calls (plus 1000 warmup) 58.621 ms avg, 17050.3 qps
+```
 ---
 # 9.6
 ## 2Conn 12M minivoy (MEM) (debug enable)
