@@ -11,6 +11,15 @@
 ---
 # 9.8
 ---
+# perf
+## 4thread 2500Conn 16K minivoy (DSA) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| duration |    10s      |
+| sample |            |
+| 
+
+
 ## 4thread 2500Conn 16K minivoy (DSA) (debug disable)
 | item             | value        |
 | -----------      | -----------      |
