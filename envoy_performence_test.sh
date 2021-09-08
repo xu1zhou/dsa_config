@@ -3,7 +3,11 @@ unset http_proxy;unset https_proxy
 # enable DSA device 
 bash /home/yizhou/1e1w-s
 
-sudo ./bazel-bin/source/exe/envoy-static -c examples/http2/envoy-https-http_without_DSA.yaml 
+// http without memcopy
+sudo ./bazel-bin/source/exe/envoy-static -c examples/tls/envoy-http-https.yaml  --concurrency 1
+// https with memcopy
+sudo ./bazel-bin/source/exe/envoy-static -c examples/tls/envoy-http-https.yaml  --concurrency 1
+
 
 # envoy compil
 cd envoy
@@ -23,4 +27,7 @@ git clean -fd ; cmake -DCMAKE_BUILD_TYPE=Release -DDML=ON .; make ;sudo ./src/mi
 #fortio 
 
 fortio load  -c 1000 -qps 0 -t 60s -httpbufferkb=16 https://10.239.48.109:4433
+// cpu bind 
+// -timeout for timeout error
+taskset -c 20-100 fortio  load   -c 2500  -qps 0 -t 60s  -httpbufferkb=128 -timeout 10s  http://10.239.48.109:4433/16K
 
