@@ -7,10 +7,38 @@
 | minivoy(DSA)     | Text             |             |            |
 
 
+
+---
+# 9.8
+## 2thread 1500Conn 16K minivoy (MEM) (debug disable)
+
+| item             | value        |
+| -----------      | -----------      |
+| CPU(0-1) | <50%           |
+| qps            | 20770            |
+| Code 200     | 1247179             |
+| avg latency     | 48.120 ms           |
+
+```
+# target 75% 0.0515445
+# target 90% 0.0567871
+# target 99% 0.0599327
+# target 99.9% 0.0689335
+Sockets used: 13000 (for perfect keepalive, would be 1000)
+Jitter: false
+Code 200 : 1247179 (100.0 %)
+Response Header Sizes : count 1247179 avg 255.95189 +/- 0.4881 min 251 max 256 sum 319217824
+Response Body/Total Sizes : count 1247179 avg 16639.952 +/- 0.4881 min 16635 max 16640 sum 2.07529986e+10
+All done 1247179 calls (plus 1000 warmup) 48.120 ms avg, 20770.9 qps
+```
+
+
+
+
 ---
 # 9.7
 
-## 1500Conn 16K minivoy (MEM) (debug enable)
+## 1500Conn 16K minivoy (MEM) (debug disable)
 CPU >91%
 timeout =10s
 error:  Closing dead socket &{{0xc007e2c580}} (err EOF at first read)
@@ -29,7 +57,7 @@ Response Body/Total Sizes : count 1133752 avg 16639.953 +/- 0.4812 min 16635 max
 All done 1133752 calls (plus 1500 warmup) 79.411 ms avg, 18875.5 qps
 ```
 
-## 1000Conn 16K minivoy (MEM) (debug enable)
+## 1000Conn 16K minivoy (MEM) (debug disable)
 All done 1178710 calls (plus 1000 warmup) 50.923 ms avg, 19628.1 qps
 timeout =10s
 error:  Closing dead socket &{{0xc007e2c580}} (err EOF at first read)
@@ -48,7 +76,7 @@ Response Body/Total Sizes : count 1178710 avg 16639.953 +/- 0.4845 min 16635 max
 All done 1178710 calls (plus 1000 warmup) 50.923 ms avg, 19628.1 qps
 ```
 
-## 1000Conn 16K minivoy (DSA) (debug enable)
+## 1000Conn 16K minivoy (DSA) (debug disable)
 CPU 92%
 throughput: 266M
 ```
