@@ -10,7 +10,48 @@
 
 ---
 # 9.8
+---
+## 4thread 2500Conn 16K minivoy (DSA) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-1) | 60-75%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 50174.0(800M)            |
+| Code 200     | 3012920(100%)             |
+| avg latency     | 49.792 ms           |
+
+## 4thread 2500Conn 16K minivoy (DSA) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-1) | 60-75%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 50079.6(800M)            |
+| Code 200     | 3007388(100%)             |
+| avg latency     | 49.887 ms           |
+
+
+
+
+## 2thread 1500Conn 16K minivoy (DSA) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-1) | <80%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 29796.9(500M)            |
+| Code 200     | 1789254(100%)             |
+| avg latency     | 50.317 ms           |
+
 ## 2thread 1500Conn 16K minivoy (MEM) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-1) | <80%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 29625.2(500M)            |
+| Code 200     | 1779132(100%)             |
+| avg latency     | 50.608 ms           |
+
+
+## 2thread 1000Conn 16K minivoy (MEM) (debug disable)
 
 | item             | value        |
 | -----------      | -----------      |
