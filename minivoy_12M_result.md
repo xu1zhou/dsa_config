@@ -19,11 +19,51 @@
 | sample |            |
 | 
 
+## 16thread 2500Conn 16K minivoy (DSA) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-15) | <20%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 54056.0(1670M)            |
+| Code 200     | 3253571(100%)             |
+| avg latency     | 46.113 ms           |
+
+
+
+## 16thread 5000Conn 16K minivoy (DSA) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-15) | 60-80%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 71635.0(1670M)            |
+| Code 200     | 4303241(100%)             |
+| avg latency     | 69.727 ms           |
+
+
+## 16thread 5000Conn 16K minivoy (MEM) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-15) | 40-60%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 104422.0(1670M)            |
+| Code 200     | 6271039(100%)             |
+| avg latency     | 47.843 ms           |
+
+
+## 16thread 2500Conn 16K minivoy (MEM) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-15) | <50%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 54622.6(873M)            |
+| Code 200     | 3280005(100%)             |
+| avg latency     | 45.741 ms           |
+
 
 ## 4thread 2500Conn 16K minivoy (DSA) (debug disable)
 | item             | value        |
 | -----------      | -----------      |
-| minivoy CPU(0-1) | 60-75%           |
+| minivoy CPU(0-3) | 60-75%           |
 | fortio CPU(20-100) | <10%           |
 | qps            | 50174.0(800M)            |
 | Code 200     | 3012920(100%)             |
@@ -32,7 +72,7 @@
 ## 4thread 2500Conn 16K minivoy (DSA) (debug disable)
 | item             | value        |
 | -----------      | -----------      |
-| minivoy CPU(0-1) | 60-75%           |
+| minivoy CPU(0-3) | 60-75%           |
 | fortio CPU(20-100) | <10%           |
 | qps            | 50079.6(800M)            |
 | Code 200     | 3007388(100%)             |
