@@ -129,11 +129,16 @@ All done 1247179 calls (plus 1000 warmup) 48.120 ms avg, 20770.9 qps
 # 9.7
 
 ## 1500Conn 16K minivoy (MEM) (debug disable)
-CPU >91%
+
 timeout =10s
 error:  Closing dead socket &{{0xc007e2c580}} (err EOF at first read)
-All done 1133752 calls (plus 1500 warmup) 79.411 ms avg, 18875.5 qps
-latency bad than 1000conn
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >91%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 18875.5(873M)            |
+| Code 200     | 1133752(100%)             |
+| avg latency     | 79.411 ms           |
 ```
 # target 75% 0.059007
 # target 90% 0.064515
@@ -274,10 +279,15 @@ Response Body/Total Sizes : count 404 avg 1.0485786e+08 +/- 0 min 1.04857858e+08
 All done 404 calls (plus 2 warmup) 297.917 ms avg, 6.7 qps
 ```
 ## 1Conn 500M minivoy (MEM) (debug disable) 60s
-to avoid error, decrese conn to 1
-when connection is 1, no error msg
-All done 50 calls (plus 1 warmup) 1230.967 ms avg, 0.8 qps
-CPU>98
+to avoid error, decrese conn to 1 ,when connection is 1, no error msg
+
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >98%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 0.8(400M)            |
+| Code 200     | 50(100%)             |
+| avg latency     | 1230 ms           |
 ```
 # target 50% 1.37143
 # target 75% 1.72857
@@ -292,8 +302,15 @@ Response Body/Total Sizes : count 50 avg 5.2428826e+08 +/- 0 min 5.24288264e+08 
 All done 50 calls (plus 1 warmup) 1230.967 ms avg, 0.8 qps
 ```
 ## 1Conn 500M minivoy (DSA) (debug disable) 60s
-seem CPU is lower 1-2%(need check)
-All done 52 calls (plus 1 warmup) 1155.330 ms avg, 0.9 qps
+
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >98%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 0.9(450M)            |
+| Code 200     | 52(100%)             |
+| avg latency     | 1155 ms           |
+
 ```
 # target 50% 1.28571
 # target 75% 1.65714
