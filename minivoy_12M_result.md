@@ -7,6 +7,32 @@
 | minivoy(DSA)     | Text             |             |            |
 
 
+# 9.9
+## DML error boundray check
+16K 
+2 thread 2 core 1500 conn | no error
+2 thread 2 core 1700 conn | appear
+
+
+## 8thread 5000Conn 16K minivoy (MEM) (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-7) | >80%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 93333.6(1493M)            |
+| Code 200     | 5605529(100%)             |
+| avg latency     | 53.523 ms           |
+
+## 4thread 1000Conn 16K minivoy (DSA) (debug disable)
+for dml 13 error debug, no error in this mode
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0-3) | 60-75%           |
+| fortio CPU(20-100) | <10%           |
+| qps            | 21552.8(344M)            |
+| Code 200     | 1294323(100%)             |
+| avg latency     | 46.380 ms           |
+
 
 ---
 # 9.8
