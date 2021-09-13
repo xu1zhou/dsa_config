@@ -8,17 +8,38 @@
 
 
 # 9.13
+## 1thread 1KConn 1/4/8/16K minivoy (DSA) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 0.9(440M)         |
+| avg latency 1    | 36.724 ms          |
+| avg latency 4    | 37.644 ms          |
+| avg latency 8    | 38.644 ms          |
+| avg latency 16    | 58.644 ms          |
+
 ## 1thread 1Conn 600M minivoy (MEM) 1min (debug disable)
 | item             | value        |
 | -----------      | -----------      |
 | minivoy CPU(0) | >990%           |
 | fortio CPU(20-100) | <30%           |
 | qps            | 0.9(440M) 0.9  0.8         |
-| avg latency 1    | 1608.742 ms          |
-| avg latency 2    | 1245.671 ms          |
-| avg latency 2    | 1221.187 ms          |
+| avg latency 1    | 1480.163.742 ms          |
+| avg latency 2    | 1401.389 ms          |
+| avg latency 2    | 1496.026 ms          |
 
-
+## 1thread 1Conn 600M minivoy (DSA) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 0.9(440M) 0.9  0.8         |
+| avg latency 1    |  1326.883 ms          |
+| avg latency 2    |  1469.388 ms          |
+| avg latency 3    |  1480.954 ms          |
+1319.793
+1466.477
 ## 1thread 1Conn 500M minivoy (DSA) 1min (debug disable)
 | item             | value        |
 | -----------      | -----------      |
