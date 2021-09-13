@@ -7,6 +7,99 @@
 | minivoy(DSA)     | Text             |             |            |
 
 
+# 9.13
+## 1thread 1Conn 600M minivoy (MEM) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 0.9(440M) 0.9  0.8         |
+| avg latency 1    | 1608.742 ms          |
+| avg latency 2    | 1245.671 ms          |
+| avg latency 2    | 1221.187 ms          |
+
+
+## 1thread 1Conn 500M minivoy (DSA) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 0.9(440M) 0.9  0.8         |
+| avg latency 1    | 1086.243 ms   |
+| avg latency  2   | 1167 ms       |
+| avg latency 3    | 1233.928    ms   |
+## 1thread 1Conn 500M minivoy (MEM) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 0.9(440M) 0.9  0.8         |
+| avg latency 1    | 1262.873 ms          |
+| avg latency 2    | 1245.671 ms          |
+| avg latency 2    | 1221.187 ms          |
+
+## 1thread 1Conn 400M minivoy (DSA) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 1.1(440M)            |
+| Code 200     | 67(100%)             |
+| avg latency     | 897.869 ms           |
+
+## 1thread 1Conn 400M minivoy (MEM) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 1.2(440M)            |         |
+| avg latency     | 847.123 ms           |
+
+## 1thread 1Conn 300M minivoy (DSA) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 1.5(450M)            |
+| Code 200     | 90(100%)             |
+| avg latency     | 671.619 ms           |
+
+## 1thread 1Conn 300M minivoy (DSA) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 1.6(450M)            |         |
+| avg latency     | 614.771 ms           |
+
+
+## 1thread 1Conn 200M minivoy (DSA) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 2.5(450M)            |
+| Code 200     | 148(100%)             |
+| avg latency     | 406.118 ms           |
+## 1thread 1Conn 100M minivoy (DSA) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 6(600M)            |
+| Code 200     | 363(100%)             |
+| avg latency     | 165.369 ms           |
+
+## 1thread 1Conn 50M minivoy (DSA) 1min (debug disable)
+| item             | value        |
+| -----------      | -----------      |
+| minivoy CPU(0) | >990%           |
+| fortio CPU(20-100) | <30%           |
+| qps            | 11.7(550M)            |
+| Code 200     | 701(100%)             |
+| avg latency     | 85.759 ms           |
+
+
 # 9.9
 ## DML error boundray check
 16K 
