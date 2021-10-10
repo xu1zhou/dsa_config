@@ -1,4 +1,4 @@
-# comparison 16K|1min|100connection
+145# comparison 16K|1min|100connection
 | item             | qps(1min)        | avg lantacy | C99 latancy|C90 latency|
 | -----------      | -----------      |-----------  |----------- |---------- |
 | backend directly | Title            |             |            |0.98243(s)101.608 ms avg, 9836.6 qps

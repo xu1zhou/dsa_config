@@ -1,4 +1,4 @@
-> sudo fortio load  -c 1 -qps 1  -n 1   -httpbufferkb=12716032 http://10.239.48.109:8080/cirros.img  
+145> sudo fortio load  -c 1 -qps 1  -n 1   -httpbufferkb=12716032 http://10.239.48.109:8080/cirros.img  
 fortio load  -c 1 -qps 0  -t 0   -httpbufferkb=12716032 http://10.239.48.109:8080/cirros.img 
 All done 1 calls (plus 0 warmup) 10.764 ms avg, 92.3 qps
 
