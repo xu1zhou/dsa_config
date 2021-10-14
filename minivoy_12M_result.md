@@ -7,6 +7,32 @@
 | minivoy(DSA)     | Text             |             |            |
 
 
+# 10.14
+
+
+
+## 2thread 1Kconn 16K minivoy (DSA) 30s (debug disable)
+
+| item             | value            |
+| -----------      | -----------      |
+| minivoy CPU(0) | 100%             |
+| fortio CPU(20-100) |          |
+| qps            |           |
+| throughput |               |
+| avg latency 16    |    26 ms          |
+
+
+## 2thread 1Kconn 16K minivoy (MEM) 30s (debug disable)
+
+| item             | value            |
+| -----------      | -----------      |
+| minivoy CPU(0) | 100%             |
+| fortio CPU(20-100) |          |
+| qps            |           |
+| throughput |               |
+| avg latency 16    |  21   ms          |
+
+
 # 9.13
 ## 1thread 1KConn 1/4/8/16K minivoy (DSA) 1min (debug disable)
 | item             | value        |
