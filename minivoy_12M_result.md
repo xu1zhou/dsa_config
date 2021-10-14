@@ -11,6 +11,46 @@
 
 
 
+
+
+## 4 queue 1 engine
+## 4 thread 2Kconn 16K minivoy (DSA)
+
+| item             | value            |
+| -----------      | -----------      |
+| minivoy CPU(0) | 100%             |
+| fortio CPU(20-100) |          |
+| qps            |   33137.4        |
+| throughput |               |
+| avg latency 16    |    60 ms          |
+| DML 13 error      | yes|
+
+
+## 3 queue 1 engine
+## 3 thread 2Kconn 16K minivoy (DSA)
+
+| item             | value            |
+| -----------      | -----------      |
+| minivoy CPU(0) | 100%             |
+| fortio CPU(20-100) |          |
+| qps            |   33137.4        |
+| throughput |               |
+| avg latency 16    |    60 ms          |
+
+
+
+## 2 queue 1 engine
+## 2 thread 2Kconn 16K minivoy (DSA)
+
+| item             | value            |
+| -----------      | -----------      |
+| minivoy CPU(0) | 100%             |
+| fortio CPU(20-100) |          |
+| qps            |   33850.6        |
+| throughput |               |
+| avg latency 16    |    58 ms          |
+
+
 ## 2thread 1Kconn 16K minivoy (DSA) 30s (debug disable)
 
 | item             | value            |
