@@ -5,7 +5,7 @@ unset http_proxy;unset https_proxy
 # sudo bash /home/yizhou/1e1w-s
 ## multiple engine queue
 # minivoy/setup-dsa.sh <WQ> <ENGINE> 
-minivoy/setup-dsa.sh 4 4
+ ./setup-dsa.sh -d 0 -e 4 -q 1 -s 128
 
 
 # // http without memcopy
